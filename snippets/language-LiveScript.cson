@@ -1,0 +1,56 @@
+'.source.livescript':
+  'Array Comprehension':
+    'prefix': 'fora'
+    'body': '[${0:# body...} for ${1:name} in ${2:array}]'
+  'Function (bound)':
+    'prefix': 'bfun'
+    'body': '(${1:args}) ~>\n  ${0:# body...}'
+  'Class':
+    'prefix': 'cla'
+    'body': 'class ${1:Class-name}${2: extends ${3:Ancestor}}\n  ${4:(${5:args}) ->\n    ${6:return}}\n$7'
+  'Else if':
+    'prefix': 'elif'
+    'body': 'else if ${1:condition}\n  ${0:# body...}'
+  'Function':
+    'prefix': 'fun'
+    'body': '(${1:args}) ->\n  ${0:# body...}\n\n'
+  'If .. Else':
+    'prefix': 'ife'
+    'body': 'if ${1:condition}\n  ${2:# body...}\nelse\n  ${3:# body...}'
+  'If':
+    'prefix': 'if'
+    'body': 'if ${1:condition}\n  ${0:# body...}'
+  'Object comprehension':
+    'prefix': 'foro'
+    'body': 'for ${1:key}, ${2:value} of ${3:Object}\n  ${0:# body...}'
+  'Range comprehension (exclusive)':
+    'prefix': 'forrex'
+    'body': 'for ${1:name} in [${2:start} til ${3:finish}]${4: by ${5:step}}\n  ${0:# body...}'
+  'Range comprehension (inclusive)':
+    'prefix': 'forr'
+    'body': 'for ${1:name} in [${2:start} to ${3:finish}]${4: by ${5:step}}\n  ${0:# body...}'
+  'Switch':
+    'prefix': 'swi'
+    'body': 'switch ${1:object}\n  when ${2:value}\n    ${0:# body...}'
+  'Ternary If':
+    'prefix': 'ifte'
+    'body': 'if ${1:condition} then ${2:value} else ${3:other}'
+  'Try .. Catch':
+    'prefix': 'try'
+    'body': 'try\n  $1\ncatch ${2:error}\n  $3'
+  'Unless':
+    'prefix': 'unl'
+    'body': '${1:action} unless ${2:condition}'
+  'Subheader':
+    'prefix': '/3'
+    'body': '# $1\n# -------------------------\n$0'
+  'log':
+    'prefix': 'log'
+    'body': 'console.log $0'
+  'require':
+    'prefix': 'req'
+    'body': '${2/^.*?([\\w_]+).*$/\\L$1/} = require ${2:\'${1:sys}\'}$3'
+'.string.quoted.double.livescript:not(.string .source), .string.quoted.double.heredoc.livescript:not(.string .source)':
+  'Interpolated Code':
+    'prefix': '#'
+    'body': '#{${1:$TM_SELECTED_TEXT}}'
