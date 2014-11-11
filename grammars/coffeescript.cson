@@ -370,6 +370,9 @@
           {
             'include': '#interpolated_livescript'
           }
+          {
+            'include': '#itemsyntax_uxc'
+          }
         ]
       }
     ]
@@ -427,6 +430,61 @@
         'match': '#([a-zA-Z$_-]+|@@?)'
         'end': ''
         'name': 'source.livescript.embedded.source.simple'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+  'itemsyntax_uxc':
+    'patterns': [
+      {
+        'begin': '\\+\\+\\+'
+        'captures':
+          '0':
+            'name': 'keyword.operator.livescript'
+        'end': '[a-zA-Z,\\.\\s_]*'
+        'name': 'source.livescript.embedded.source'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '\\-\\-\\-'
+        'captures':
+          '0':
+            'name': 'punctuation.section.embedded.livescript'
+        'end': '[a-zA-Z,\\.\\s_]*'
+        'name': 'source.livescript.embedded.source'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '\\+\\+'
+        'captures':
+          '0':
+            'name': 'keyword.operator.livescript'
+        'end': '[a-zA-Z,\\._]*?(?=\\s|\\")'
+        'name': 'source.livescript.embedded.source'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '\\-\\-'
+        'captures':
+          '0':
+            'name': 'punctuation.section.embedded.livescript'
+        'end': '[a-zA-Z,\\._]*?(?=\\s|\\")'
+        'name': 'source.livescript.embedded.source'
         'patterns': [
           {
             'include': '$self'
