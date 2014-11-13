@@ -456,7 +456,7 @@
         'begin': '\\+\\+\\+'
         'captures':
           '0':
-            'name': 'keyword.operator.livescript'
+            'name': 'uxc.items.answer.correct'
         'end': '[^\\"]*'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -465,11 +465,12 @@
           }
         ]
       }
+
       {
         'begin': '\\-\\-\\-'
         'captures':
           '0':
-            'name': 'punctuation.section.embedded.livescript'
+            'name': 'uxc.items.answer.wrong'
         'end': '[^\\"]*'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -482,9 +483,9 @@
         'begin': '(?:\\+\\+[^\\+\\-\\s\\"]*)'
         'captures':
           '0':
-            'name': 'keyword.operator.livescript'
+            'name': 'uxc.items.answer.correct'
           '1':
-            'name': 'punctuation.section.embedded.livescript'
+            'name': 'uxc.items.answer.wrong'
         'end': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+))*)*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -497,9 +498,9 @@
         'begin': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+))*)*)(?=.*\\+\\+.*)'
         'captures':
           '0':
-            'name': 'punctuation.section.embedded.livescript'
+            'name': 'uxc.items.answer.wrong'
           '1':
-            'name': 'keyword.operator.livescript'
+            'name': 'uxc.items.answer.correct'
         'end': '(?:\\+\\+[^\\+\\-\\s\\"]*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -512,9 +513,9 @@
         'begin': '(?:\\-\\-[^\\+\\-\\s\\"]*)'
         'captures':
           '0':
-            'name': 'punctuation.section.embedded.livescript'
+            'name': 'uxc.items.answer.wrong'
           '1':
-            'name': 'keyword.operator.livescript'
+            'name': 'uxc.items.answer.correct'
         'end': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\-)\\-(?!\\-))*)*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -527,9 +528,9 @@
         'begin': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\-)\\-(?!\\-))*)*)(?=.*\\-\\-.*)'
         'captures':
           '0':
-            'name': 'punctuation.section.embedded.livescript'
+            'name': 'uxc.items.answer.wrong'
           '1':
-            'name': 'keyword.operator.livescript'
+            'name': 'uxc.items.answer.correct'
         'end': '(?:\\-\\-[^\\+\\-\\s\\"]*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
@@ -537,7 +538,8 @@
             'include': '$self'
           }
         ]
-      }    ]
+      }
+    ]
   'numeric':
     'patterns': [
       {
