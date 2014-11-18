@@ -445,7 +445,7 @@
           '0':
             'name': 'punctuation.section.embedded.livescript'
         'end': '\\)\\)|(?=\\")'
-        'name': 'keyword.operator.livescript'
+        'name': 'uxc.items.answer.correct'
         'patterns': [
           {
             'include': '$self'
@@ -471,6 +471,19 @@
         'captures':
           '0':
             'name': 'uxc.items.answer.wrong'
+        'end': '[^\\"]*'
+        'name': 'source.livescript.embedded.source'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '(?<=\\")_'
+        'captures':
+          '0':
+            'name': 'uxc.items.answer.correct'
         'end': '[^\\"]*'
         'name': 'source.livescript.embedded.source'
         'patterns': [
