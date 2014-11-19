@@ -493,13 +493,15 @@
         ]
       }
       {
-        'begin': '(?:\\+\\+[^\\+\\-\\s\\"]*)'
+        'begin': '(.*?)(\\+\\+(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+)|(?<!\\-)\\-(?!\\-))*)'
         'captures':
+          '0':
+            'name': 'uxc.items.answer.wrong'
           '0':
             'name': 'uxc.items.answer.correct'
           '1':
             'name': 'uxc.items.answer.wrong'
-        'end': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+))*)*)'
+        'end': '((\\s?(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+)|(?<!\\-)\\-(?!\\-))*)*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
           {
@@ -508,43 +510,15 @@
         ]
       }
       {
-        'begin': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+))*)*)(?=.*\\+\\+.*)'
+        'begin': '(.*?)(\\-\\-(?:[^\\+\\-\\s\\"]|(?<!\\+)\\+(?!\\+)|(?<!\\-)\\-(?!\\-))*)'
         'captures':
+          '0':
+            'name': 'uxc.items.answer.correct'
           '0':
             'name': 'uxc.items.answer.wrong'
           '1':
             'name': 'uxc.items.answer.correct'
-        'end': '(?:\\+\\+[^\\+\\-\\s\\"]*)'
-        'name': 'source.livescript.embedded.source'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-      {
-        'begin': '(?:\\-\\-[^\\+\\-\\s\\"]*)'
-        'captures':
-          '0':
-            'name': 'uxc.items.answer.wrong'
-          '1':
-            'name': 'uxc.items.answer.correct'
-        'end': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\-)\\-(?!\\-))*)*)'
-        'name': 'source.livescript.embedded.source'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-      {
-        'begin': '((?:\\s?(?:[^\\+\\-\\s\\"]|(?<!\\-)\\-(?!\\-))*)*)(?=.*\\-\\-.*)'
-        'captures':
-          '0':
-            'name': 'uxc.items.answer.wrong'
-          '1':
-            'name': 'uxc.items.answer.correct'
-        'end': '(?:\\-\\-[^\\+\\-\\s\\"]*)'
+        'end': '((\\s?(?:[^\\+\\-\\s\\"]|(?<!\\-)\\-(?!\\-)|(?<!\\+)\\+(?!\\+))*)*)'
         'name': 'source.livescript.embedded.source'
         'patterns': [
           {
