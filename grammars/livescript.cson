@@ -346,7 +346,7 @@
         'end': '([\\\\)\\s,\\};\\]])'
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.livescript'
+            'name': 'punctuation.definition.meta.end.livescript'
         'contentName': 'string.quoted.single.livescript'
       }
     ]
