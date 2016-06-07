@@ -146,7 +146,7 @@
     'name': 'string.regexp.livescript'
   }
   {
-    'match': '(?x)\n\t\t\t\t\\b(?<![\\.\\$\\-])(?:\n\t\t        t(?:h(?:is|row|en)|ry|ypeof!?|il|o)\n\t\t        |c(?:on(?:tinue|st)|a(?:se|tch)|lass)\n\t\t        |i(?:n(?:stanceof)?|mp(?:ort(?:\\s+all)?|lements)|[fs])\n\t\t        |d(?:e(?:fault|lete|bugger)|o)\n\t\t        |f(?:or(?:\\s+own)?|inally|unction|rom|allthrough)\n\t\t        |s(?:uper|witch)\n\t\t        |e(?:lse|x(?:tends|port)|val)\n\t\t        |a(?:nd|rguments)\n\t\t        |n(?:ew|ot)\n\t\t        |un(?:less|til)\n\t\t        |w(?:hile|ith|hen)\n\t\t        |o(?:f|r|therwise)\n\t\t        |return|break|let|var|loop\n\t\t        |match\n\t\t        |by\n\t\t\t\t)(?!\\-|\\s*:)\\b\n\t\t\t'
+    'match': '(?x)\n\t\t\t\t\\b(?<![\\.\\$\\-])(?:\n\t\t        t(?:h(?:is|row|en)|ry|ypeof!?|il|o)\n\t\t        |c(?:on(?:tinue|st)|a(?:se|tch)|lass)\n\t\t        |i(?:n(?:stanceof)?|mp(?:ort(?:\\s+all)?|lements)|snt|[fs])\n\t\t        |d(?:e(?:fault|lete|bugger)|o)\n\t\t        |f(?:or(?:\\s+own)?|inally|unction|rom|allthrough)\n\t\t        |s(?:uper|witch)\n\t\t        |e(?:lse|x(?:tends|port)|val)\n\t\t        |a(?:nd|rguments)\n\t\t        |n(?:ew|ot)\n\t\t        |un(?:less|til)\n\t\t        |w(?:hile|ith|hen)\n\t\t        |o(?:f|r|therwise)\n\t\t        |return|break|let|var|loop\n\t\t        |match\n\t\t        |by\n\t\t\t\t)(?!\\-|\\s*:)\\b\n\t\t\t'
     'name': 'keyword.control.livescript'
   }
   {
