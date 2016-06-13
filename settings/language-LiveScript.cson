@@ -1,0 +1,15 @@
+'.source.livescript':
+  editor:
+    commentStart: '# '
+    increaseIndentPattern: '''
+      (?x)
+      ^\\s*(
+        .*class
+        |[a-zA-Z\\$_](\\w|\\$|:|\\.)*\\s*(?=\\:(\\s*\\(.*\\))?\\s*((=|-)>\\s*$)) # function that is not one line
+        |[a-zA-Z\\$_](\\w|\\$|\\.)*\\s*(:|=)\\s*((if|while)(?!.*?then)|for|$)    # assignment using multiline if/while/for
+        |(if|while)\\b(?!.*?then)|for\\b
+        |(try|finally|catch\\s+\\S.*)\\s*$
+        |.*[-=]>$
+        |.*[\\{\\[]$
+      )'''
+    decreaseIndentPattern: '^\\s*(\\}|\\]|else|catch|finally)$'
