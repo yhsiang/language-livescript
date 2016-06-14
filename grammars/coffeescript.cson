@@ -33,8 +33,11 @@
     'name': 'meta.class.instance.constructor'
   }
   {
-    'match': '(?x)\n\t\t\t\t\\b\n\t\t\t\tp(?:ackage|r(?:ivate|otected)|ublic)\n\t\t        |interface\n\t\t        |enum|static|yield\n\t\t       \\b\n\t\t   \t'
-    'name': 'keyword.illegal.livescript'
+    'match': """(?x)
+      (?<![\\w$-])
+      (?:p(?:ackage|r(?:ivate|otected)|ublic)|interface|enum|static)
+      (?![\\w$-])"""
+    'name': 'invalid.illegal.livescript'
   }
   {
     'begin': '\'\'\''
@@ -239,7 +242,7 @@
         'name': 'keyword.control.inheritance.livescript'
       '4':
         'name': 'entity.other.inherited-class.livescript'
-    'match': '(class\\b)\\s+(@?[a-zA-Z$_][\\w$.-]*)?(?:\\s+(extends)\\s+(@?[a-zA-Z$_][\\w$.-]*))?'
+    'match': '((?<![\\w$-])class(?![\\w$-]))\\s+(@?[a-zA-Z$_][\\w$.-]*)?(?:\\s+(extends)\\s+(@?[a-zA-Z$_][\\w$.-]*))?'
     'name': 'meta.class.livescript'
   }
   {
