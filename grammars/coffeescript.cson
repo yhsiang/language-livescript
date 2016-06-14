@@ -110,7 +110,7 @@ patterns: [
     captures:
       1:
         name: 'punctuation.definition.comment.livescript'
-    match: '(#)(?!\\{).*$\\n?'
+    match: '(#)(?!\\{).*$'
     name: 'comment.line.number-sign.livescript'
   }
   {
