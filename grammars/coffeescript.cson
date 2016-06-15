@@ -336,7 +336,7 @@ patterns: [
     name: 'meta.brace.round.livescript'
   }
   {
-    match: '\\[|\\]\\s*'
+    match: '\\[|\\]'
     name: 'meta.brace.square.livescript'
   }
   {
