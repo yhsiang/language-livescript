@@ -328,7 +328,7 @@ patterns: [
     name: 'meta.delimiter.method.period.livescript'
   }
   {
-    match: '\\{|\\}'
+    match: '{|}'
     name: 'meta.brace.curly.livescript'
   }
   {
