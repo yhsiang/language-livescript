@@ -396,16 +396,7 @@ repository:
         ]
       }
     ]
-  embedded_comment:
-    patterns: [
-      {
-        captures:
-          1:
-            name: 'punctuation.definition.comment.livescript'
-        match: '(?<!\\\\)(#).*$\\n'
-        name: 'comment.line.number-sign.livescript'
-      }
-    ]
+
   embedded_spaced_comment:
     patterns: [
       {
