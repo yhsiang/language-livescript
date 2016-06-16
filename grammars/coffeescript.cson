@@ -1,4 +1,4 @@
-comment: 'LiveScript Syntax: version 1'
+comment: 'LiveScript Syntax for Atom: version 0.0.3'
 fileTypes: [
   'ls'
   'Slakefile'
