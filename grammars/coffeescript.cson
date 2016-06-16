@@ -3,6 +3,7 @@ fileTypes: [
   'ls'
   'Slakefile'
   'ls.erb'
+  'json.ls'
 ]
 firstLineMatch: '^#!.*\\bls'
 foldingStartMarker: '^\\s*class\\s+\\S.*$|.*(->|=>)\\s*$|.*[\\[{]\\s*$'
