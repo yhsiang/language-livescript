@@ -13,4 +13,4 @@
       | .* [=:] \\s* $         # assignments
       | .* [-~]>\\*? \\s* $    # functions
       """
-    decreaseIndentPattern: '^\\s*(\\}|\\]|else|catch|finally)$'
+    decreaseIndentPattern: "^\\s*(\\}|\\]|\\)|else|then|catch|finally)$"
