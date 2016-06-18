@@ -2,15 +2,16 @@
   editor:
     commentStart: '# '
     nonWordCharacters: '/\\"\':,.;<>~!@#%^&*|+=[]{}()`?-…'
-    increaseIndentPattern: '''
+    increaseIndentPattern: """
       (?x)
-      ^\\s*(
-        .*class
-        |[a-zA-Z\\$_](\\w|\\$|:|\\.)*\\s*(?=\\:(\\s*\\(.*\\))?\\s*((=|-)>\\s*$)) # function that is not one line
-        |[a-zA-Z\\$_](\\w|\\$|\\.)*\\s*(:|=)\\s*((if|while)(?!.*?then)|for|$)    # assignment using multiline if/while/for
-        |(if|while)\\b(?!.*?then)|for\\b
-        |(try|finally|catch\\s+\\S.*)\\s*$
-        |.*[-=]>$
-        |.*[\\{\\[]$
-      )'''
+      (
+          (?<![\\w$_.]|[\\w$_]-) class \\s*   # class declarations
+        | (?<![\\w$_.]|[\\w$_]-) (?:try|new|then|else|finally|do|return|loop|default
+          |export|for\\sever|typeof\\!?|delete\\!?|import(?:\\sall)) \\s* $             # direct indent
+        | (?<![\\w$_.]|[\\w$_]-) (?:function|if|until|for|while|case) (?:(?!then).)+ $  # then...
+        | ^ \\s* \\*             # list asterisks
+        | .* [\\{\\[\\(] \\s* $  # braces
+        | .* [=:] \\s* $         # assignments
+        | .* [-~]> \\s* $        # functions
+      )"""
     decreaseIndentPattern: '^\\s*(\\}|\\]|else|catch|finally)$'
