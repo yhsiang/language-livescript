@@ -1,6 +1,7 @@
 '.source.livescript':
   editor:
     commentStart: '# '
+    nonWordCharacters: "/\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
     increaseIndentPattern: '''
       (?x)
       ^\\s*(
