@@ -5,7 +5,7 @@
     increaseIndentPattern: """
       (?x)
       (
-          (?<![\\w$_.]|[\\w$_]-) class \\s*   # class declarations
+          (?<![\\w$_.]|[\\w$_]-) class \\s+   # class declarations
         | (?<![\\w$_.]|[\\w$_]-) (?:try|new|then|else|finally|do|return|loop|default
           |export|for\\sever|typeof\\!?|delete\\!?|import(?:\\sall)) \\s* $             # direct indent
         | (?<![\\w$_.]|[\\w$_]-) (?:function|if|until|for|while|case) (?:(?!then).)+ $  # then...
